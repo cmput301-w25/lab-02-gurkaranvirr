@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         String[] initialCities = {"Edmonton", "Paris", "London"};
         dataList = new ArrayList<>(Arrays.asList(initialCities));
-        cityAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, dataList);
+
+        cityAdapter = new ArrayAdapter<>(this, R.layout.content, R.id.textView, dataList);
         cityList.setAdapter(cityAdapter);
         cityList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
@@ -60,3 +61,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
